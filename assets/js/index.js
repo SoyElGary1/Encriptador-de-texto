@@ -21,6 +21,7 @@ function desencriptar() {
     // Reemplaza los caracteres del primer parametro de la función por el segundo incluyendo si son letras mayúsculas
     // (En está función hago lo mismo que en la función encriptar solo que invierto la conversion de caracteres)
     const textoDesencriptado = texto.replace(/ai/gi, 'a').replace(/enter/gi, 'e').replace(/imes/gi, 'i').replace(/ober/gi, 'o').replace(/ufat/gi, 'u');
+    mensaje.setAttribute('style', 'display:flex')
     btnCopiar.setAttribute('style', 'display:flex')
     return mensaje.textContent = textoDesencriptado
 }
