@@ -6,15 +6,22 @@ const aside = document.querySelector('#aside');
 
 function encriptar() {
     const texto = document.querySelector('#texto').value;
+    const textoSinAcentos = normalizarTexto(texto);
     // Reemplaza los caracteres del primer parametro de la funcion por el segundo incluyendo si son letras mayúsculas
-    const textoEncriptado = texto.replace(/u/gi, 'ufat').replace(/e/gi, 'enter').replace(/o/gi, 'ober').replace(/i/gi, 'imes').replace(/a/gi, 'ai');
-
+    const textoEncriptado = textoSinAcentos.replace(/u/gi, 'ufat').replace(/e/gi, 'enter').replace(/o/gi, 'ober').replace(/i/gi, 'imes').replace(/a/gi, 'ai');
+    console.log(textoEncriptado)
     return textoEncriptado;
 }
 
+//Funcion para sacar los acentos de las letras
+function normalizarTexto(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+
 //Función para cambiar el texto cuando ocurra una modificación
 function mostrarCodigo(texto){
-    const parrafo = document.querySelector('#texto-codificado');
+    const parrafo = document.querySelector('#mensaje');
     parrafo.textContent = texto
 }
 
