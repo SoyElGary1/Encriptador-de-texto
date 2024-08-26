@@ -25,15 +25,15 @@ function desencriptar() {
     return mensaje.textContent = textoDesencriptado
 }
 
-function copiar(newClip){
+function copiar(newClip) {
     navigator.clipboard.writeText(newClip).then(
         () => {
-          
+
         },
         () => {
-          
+
         },
-      );
+    );
 }
 
 //Funcion para sacar los acentos de las letras
@@ -41,18 +41,18 @@ function normalizarTexto(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-function sacarImagenAside(){
+function sacarImagenAside() {
     const img = document.querySelector('.img');
     const msjEncriptado = document.querySelector('.msj-encriptado');
 
     img.setAttribute('style', 'display:none');
     msjEncriptado.setAttribute('style', 'display:none');
 
-    
+
 }
 
 //Función para cambiar el texto cuando ocurra una modificación
-function mostrarCodigo(texto){
+function mostrarCodigo(texto) {
     const parrafo = document.querySelector('#mensaje');
     parrafo.textContent = texto
 }
@@ -77,7 +77,7 @@ btnDesencriptar.addEventListener('click', function () {
     reset()
 });
 
-btnCopiar.addEventListener('click', function(){
+btnCopiar.addEventListener('click', function () {
     const textoCopiado = document.querySelector('.mensaje').value;
     copiar(textoCopiado);
 })

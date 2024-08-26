@@ -89,7 +89,7 @@ form {
   color: #0a3871;
 }
 
-.btn-copiar{
+.btn-copiar {
   display: none;
   margin: 1rem;
   width: 328px;
@@ -113,7 +113,7 @@ span p {
   height: 89%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -140,14 +140,77 @@ span p {
 
 .icono {
   display: block;
-  margin: 1rem; 
+  margin: 1rem;
 }
 
-.msj-encriptado{
+.msj-encriptado {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 80%;
   gap: 10px;
   align-items: center;
+}
+
+/* Responsive */
+
+@media (max-width: 1287px) {
+  .btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .btn {
+    width: 328px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    gap: 80px;
+  }
+
+  .mensaje {
+    width: 100%;
+    height: 150px;
+
+  }
+
+  .btn-copiar {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    width: 100%;
+  }
+  
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
