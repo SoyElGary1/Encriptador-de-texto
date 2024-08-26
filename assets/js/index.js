@@ -73,6 +73,7 @@ btnEncriptar.addEventListener('click', function () {
 });
 
 btnDesencriptar.addEventListener('click', function () {
+    sacarImagenAside()
     mostrarCodigo(desencriptar())
     reset()
 });
